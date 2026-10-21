@@ -20,7 +20,7 @@ void Enrutador::agregarVecino(const std::string& vecino, int costo) {
 
 // Metodo para imprimir los datos locales
 void Enrutador::imprimirTablaDirecta() const {
-    std::cout << "=== Tabla de costos directos del Enrutador: " << nombre << " ===" << std::endl;
+    std::cout << " Tabla de costos directos del Enrutador: " << nombre << std::endl;
     for (const auto& par : tablaCostos) {
         std::cout << "Destino: " << par.first << " | Costo: " << par.second << std::endl;
     }
