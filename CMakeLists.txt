@@ -6,7 +6,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(Practica4 main.cpp
-    enrutador.h enrutador.cpp)
+    enrutador.h enrutador.cpp
+    red.h red.cpp)
 
 include(GNUInstallDirs)
 install(TARGETS Practica4
