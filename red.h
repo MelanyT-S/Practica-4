@@ -7,18 +7,22 @@
 
 class Red {
 private:
-    // Contenedor STL global para almacenar todos los enrutadores que conforman la red
-    std::map<std::string, Enrutador> enrutadores;
+    std::map<std::string, Enrutador> enrutadores; // Contenedor global de enrutadores de la red
 
 public:
-    // Agrega un nuevo enrutador a la red si no existe
+    // Inserción y eliminación dinámica de nodos y enlaces exigida por la guía
     void agregarEnrutador(const std::string& nombre);
+    void eliminarEnrutador(const std::string& nombre);
 
-    // Conecta dos enrutadores de forma bidireccional con un costo de enlace
     void conectar(const std::string& origen, const std::string& destino, int costo);
+    void desconectar(const std::string& origen, const std::string& destino);
 
-    // Imprime las tablas de todos los enrutadores de la red
-    void mostrarRed() const;
+    bool cargarDesdeArchivo(const std::string& nombreArchivo); // Configuración inicial por .txt
+    void calcularRutasMinimas(); // Algoritmo Dijkstra centralizado para recalcular red
+    void mostrarRedCompleta() const;
+
+    // Consultar ruta y costo entre un origen y un destino específico
+    void consultarCaminoEspecifico(const std::string& origen, const std::string& destino) const;
 };
 
 #endif
