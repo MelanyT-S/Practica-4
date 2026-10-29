@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 #include <iostream>
-
-using namespace std;
-=======
 #include "Red.h"
 #include <iostream>
 
@@ -60,7 +56,7 @@ int main() {
             std::cout << "Ingrese el costo del enlace: ";
             std::cin >> costo;
             miRed.conectar(origen, destino, costo);
-            std::cout << ">>> Enlace agregado y rutas recalculadas automaticamente!\n";
+            std::cout << ">>> Enlace agregado y rutas recalculadas automaticamente\n";
             break;
 
         case 5:
@@ -89,11 +85,6 @@ int main() {
         default:
             std::cout << "Opcion invalida. Intente de nuevo.\n";
         }
-    } while (opcion != 6);
->>>>>>> Stashed changes
-
-int main()
-{
-    cout << "Hello World!" << endl;
-    return 0;
+    }
+    while (opcion != 6);
 }

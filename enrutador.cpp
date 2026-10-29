@@ -13,7 +13,7 @@ void Enrutador::agregarVecino(const std::string& vecino, int costo) {
 }
 
 void Enrutador::eliminarVecino(const std::string& vecino) {
-    vecinosDirectos.erase(vecino); // Elimina el enlace físico directo
+    vecinosDirectos.erase(vecino); // Elimina el enlace fisico directo
     tablaCostos.erase(vecino);
     caminos.erase(vecino);
 }
@@ -35,8 +35,8 @@ void Enrutador::limpiarTabla() {
 }
 
 void Enrutador::imprimirTablaEnrutamiento() const {
-    std::cout << "--- Tabla de Enrutamiento del Nodo: " << nombre << " ---\n";
-    std::cout << "Destino\tCosto\tCamino Óptimo\n";
+    std::cout << " Tabla de Enrutamiento del Nodo: " << nombre << "\n";
+    std::cout << "Destino\tCosto\tCamino Optimo\n";
     auto itCamino = caminos.begin();
     for (const auto& par : tablaCostos) {
         std::cout << "  " << par.first << "\t  " << par.second << "\t";
@@ -49,5 +49,4 @@ void Enrutador::imprimirTablaEnrutamiento() const {
         std::cout << "\n";
         ++itCamino;
     }
-    std::cout << "----------------------------------------------\n\n";
 }
